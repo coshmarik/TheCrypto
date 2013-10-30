@@ -1,0 +1,98 @@
+﻿<!--   This file is part of THE CRYPTO.
+   THE CRYPTO is the program for encrypting files for Windows 8.
+    Copyright (C) 2013  Daria V. Korosteleva <coooshmarik@gmail.com>
+
+    THE CRYPTO is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    THE CRYPTO is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+-->
+    
+<Page
+    x:Class="Crypto.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Crypto"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <StackPanel x:Name="MainPanel">
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0E1F1B"/>
+                <GradientStop Color="#FF6DFFDE" Offset="1"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+        <ProgressBar x:Name="barProgress" Background="#FF0E1F1B" Foreground="Pink" HorizontalAlignment="Stretch" CharacterSpacing="1" Maximum="500" Height="10" Value="0"/>
+        <Grid x:Name="pnlLabel" Height="85">
+            <TextBlock x:Name="tbLabel" HorizontalAlignment="Left" Margin="50,20,20,20" Text="The Crypto" FontSize="40" Foreground="Pink" Grid.Row="0" Grid.Column="0"/>
+            <TextBlock x:Name="tbMessage" HorizontalAlignment="Right" Margin="20,30,20,20" FontSize="25" Foreground="Pink" Grid.Row="0" Grid.Column="0"/>
+        </Grid>
+        <StackPanel x:Name="FilePanel">
+            <StackPanel x:Name="pnlFile" Orientation="Horizontal" Height="65">
+                <Button x:ConnectionId='14' x:Name="btnCollapseFile" Width="55" Height="55" Content="-" FontSize="30" Foreground="Black" Background="Transparent" BorderBrush="Pink" Margin="5,0,5,5"                                 VerticalAlignment="Bottom"/>
+                <TextBlock x:Name="tkFile" Text="Encrypt or decrypt file" Foreground="Black" FontSize="25" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Grid x:Name="grFile" Visibility="Visible" Height="85">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="txFile" Height="20" Margin="20,-20,0,0" FontSize="16" IsReadOnly="True" Grid.Row="0" Grid.Column="0"/>
+                <Button x:ConnectionId='13' x:Name="btnFile" Foreground="Black" Style="{StaticResource MoreAppBarButtonStyle}" AutomationProperties.Name="File" Margin="-10,0,0,0"  Grid.Row="0" Grid.Column="1"                        />
+            </Grid>            
+            <StackPanel x:Name="pnlPass" Orientation="Horizontal" Height="65">
+                <Button x:ConnectionId='12' x:Name="btnCollapsePassFile" Width="55" Height="55" Content="-" FontSize="30" Foreground="Black" Background="Transparent" BorderBrush="Pink" Margin="5" Grid.Column="0"                                     VerticalAlignment="Stretch"/>
+                <TextBlock x:Name="tkPassFile" Text="Pass file" Foreground="Black" FontSize="25" VerticalAlignment="Center" Grid.Column="1"/>
+            </StackPanel>
+            <StackPanel x:Name="pnlCollapsePasses">
+                <StackPanel x:Name="pnlPassesFiles" Orientation="Horizontal" Visibility="Visible" Height="100">
+                    <Button x:ConnectionId='6' x:Name="btnNewPass" Foreground="Black" Style="{StaticResource AddAppBarButtonStyle}" AutomationProperties.Name="New Pass"                           />
+                    <Button x:ConnectionId='7' x:Name="btnAddPass" Foreground="Black" Style="{StaticResource MoreAppBarButtonStyle}" AutomationProperties.Name="Import Pass"                           />
+                    <Button x:ConnectionId='8' x:Name="btnMovePass" Foreground="Black" Style="{StaticResource MoveToFolderAppBarButtonStyle}" AutomationProperties.Name="Export Pass"                            />
+                    <Button x:ConnectionId='9' x:Name="btnRenamePass" Foreground="Black" Style="{StaticResource RenameAppBarButtonStyle}" AutomationProperties.Name="Rename Pass"                              />
+                    <Button x:ConnectionId='10' x:Name="btnDelPass" Foreground="Black" Style="{StaticResource DeleteAppBarButtonStyle}" AutomationProperties.Name="Delete Pass"                           />
+                    <Button x:ConnectionId='11' x:Name="btnDelAllPass" Foreground="Black" Style="{StaticResource DiscardAppBarButtonStyle}" AutomationProperties.Name="Delete All Passes"                              />
+                </StackPanel>
+                <StackPanel x:Name="pnlNewPass" Visibility="Collapsed" Height="155">
+                    <TextBlock x:Name="tkNewPass" Text="Choose pass'size" Margin="20,0,0,0" Foreground="Black" FontSize="18"/>
+                    <Slider x:Name="sldPassSize" Background="Black" Margin="20,0,20,0" Minimum="5" Maximum="15" Value="10"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:ConnectionId='4' x:Name="btnSavePass" Foreground="Black" Style="{StaticResource SaveAppBarButtonStyle}" Margin="20,-10,0,0"                            />
+                        <Button x:ConnectionId='5' x:Name="btnCancelPass" Foreground="Black" Style="{StaticResource NoAppBarButtonStyle}" AutomationProperties.Name="Cancel" Margin="20,-10,0,0"                              />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="pnlRenamePass" Orientation="Vertical" Visibility="Collapsed" Height="150">
+                    <TextBox x:Name="txRenamePass" Height="20" MaxLength="120" Margin="20,5,5,5"/>
+                    <StackPanel x:Name="pnlRenamePassBtns" Orientation="Horizontal">
+                        <Button x:ConnectionId='2' x:Name="btnSaveRenamePass" Foreground="Black" Style="{StaticResource SaveAppBarButtonStyle}" Margin="20,5,5,5"                                  />
+                        <Button x:ConnectionId='3' x:Name="btnCancelRenamePass" Foreground="Black" Style="{StaticResource NoAppBarButtonStyle}" AutomationProperties.Name="Cancel" Margin="5"                                    />
+                    </StackPanel>
+                </StackPanel>
+                <ListView x:ConnectionId='1' x:Name="lstPass" Margin="20,0,20,0" Visibility="Visible"                                            />
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+    <Page.BottomAppBar>
+        <AppBar x:Name="CryptoBar" VerticalAlignment="Bottom" Background="#FFA5A5A5" Height="110" BorderBrush="Transparent">
+            <Grid>
+                <Button x:ConnectionId='15' x:Name="CryptFilesButton" HorizontalAlignment="Left" Style="{StaticResource NextAppBarButtonStyle}" Foreground="Black" AutomationProperties.Name="Crypted files"                                 />
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                    <Button x:ConnectionId='16' x:Name="CryptButton" HorizontalAlignment="Right" Style="{StaticResource RedoAppBarButtonStyle}" Foreground="Black" AutomationProperties.Name="Crypt"                            />
+                    <Button x:ConnectionId='17' x:Name="DecryptButton" HorizontalAlignment="Right" Style="{StaticResource UndoAppBarButtonStyle}" Foreground="Black" AutomationProperties.Name="Decrypt"                              />
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>
+

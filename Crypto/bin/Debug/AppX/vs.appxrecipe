@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WIN8-VB</Machine>
+    <WindowsUser>Daria</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>B05193821D72CB6E4AD129F0EAED0A48C0D44BA90617C80F43C8882DC4C0D3C6</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>51291CoshmarikApps.CryptoCode_1.0.0.3_neutral__n9jm56p4d594y</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>51291CoshmarikApps.CryptoCode_n9jm56p4d594y!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>51291CoshmarikApps.CryptoCode</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=DF25126C-7FD7-4FD4-8396-24A915B94ACE</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.3</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\fly\Crypto\Crypto\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-10-21T19:54:13.747</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\bin\Debug\TheCrypto.exe">
+      <PackagePath>TheCrypto.exe</PackagePath>
+      <Modified>2013-10-22T19:48:10.013</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\bin\Debug\TheCrypto.pdb">
+      <PackagePath>TheCrypto.pdb</PackagePath>
+      <Modified>2013-10-22T19:48:09.982</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-10-02T19:51:47.453</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-10-02T19:51:50.307</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-10-02T19:51:55.443</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-10-02T19:51:58.290</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2013-07-14T19:20:16.454</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\bin\Debug\Forms\AgreementPage.xaml">
+      <PackagePath>Forms\AgreementPage.xaml</PackagePath>
+      <Modified>2013-10-22T19:27:23.790</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\bin\Debug\Forms\CryptedFilesPage.xaml">
+      <PackagePath>Forms\CryptedFilesPage.xaml</PackagePath>
+      <Modified>2013-10-13T19:45:15.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\bin\Debug\Forms\SearchPage.xaml">
+      <PackagePath>Forms\SearchPage.xaml</PackagePath>
+      <Modified>2013-10-12T20:16:49.143</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2013-08-31T19:31:28.539</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\bin\Debug\Forms\MainPage.xaml">
+      <PackagePath>Forms\MainPage.xaml</PackagePath>
+      <Modified>2013-10-21T19:54:08.796</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\fly\Crypto\Crypto\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-10-21T19:54:13.262</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

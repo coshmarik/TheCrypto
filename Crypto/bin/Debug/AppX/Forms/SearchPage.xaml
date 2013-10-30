@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="Crypto.SearchPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Crypto"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+
+    <StackPanel x:Name="MainPanel">
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0E1F1B"/>
+                <GradientStop Color="#FF6DFFDE" Offset="1"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+        <ProgressBar x:Name="barProgress" Background="#FF0E1F1B" Foreground="Pink" HorizontalAlignment="Stretch" CharacterSpacing="1" Maximum="500" Height="10" Value="0"/>
+        <StackPanel x:Name="pnlLabel" Orientation="Horizontal">
+            <Button x:ConnectionId='3' x:Name="btnBackToMain" HorizontalAlignment="Left" Style="{StaticResource PreviousAppBarButtonStyle}" Foreground="Black" Margin="20,10,0,0" AutomationProperties.Name="Back To Main Menu"                               />
+            <TextBlock HorizontalAlignment="Left" Margin="20,20,20,20" TextWrapping="Wrap" Text="The Crypto" VerticalAlignment="Top" FontSize="40" Foreground="Pink"/>
+        </StackPanel>
+        <StackPanel x:Name="pnlFiles">
+            <TextBlock x:Name="tkSearchLabel" Margin="20" Foreground="Black" FontSize="30" VerticalAlignment="Center"/>
+            <StackPanel x:Name="pnlPassFiles" Margin="20">
+                <TextBlock x:Name="tkPassFiles" Text="Pass files:" Foreground="Black" FontSize="25" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                <ListView x:ConnectionId='2' x:Name="lvPassFiles"                      />
+            </StackPanel>
+            <StackPanel x:Name="pnlCryptedFiles" Margin="20">
+                <TextBlock x:Name="tkCryptedFiles" Text="Crypted files:" Foreground="Black" FontSize="25" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                <ListView x:ConnectionId='1' x:Name="lvCryptedFiles"                      />
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+    <Page.BottomAppBar>
+        <AppBar x:Name="CryptoBar" VerticalAlignment="Bottom" Background="#FFA5A5A5" Height="110" BorderBrush="Transparent">
+            <Button x:ConnectionId='4' x:Name="btnShowFile" HorizontalAlignment="Right" Style="{StaticResource NextAppBarButtonStyle}" Foreground="Black" AutomationProperties.Name="Show the file"                            />
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>
+

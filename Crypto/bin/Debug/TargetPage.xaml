@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="Crypto.TargetPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Crypto"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="MainGrid" Background="#FFA5A5A5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="50,20,20,20" TextWrapping="Wrap" Text="Crypto" VerticalAlignment="Top" FontSize="40" Foreground="#FFE999A0" Grid.Row="0"/>
+        <StackPanel x:Name="pnlFiles" Background="#FFE999A0" Grid.Row="1" Grid.Column="0">
+            <TextBlock x:Name="tkFiles" Text="Files for encryption" Margin="20" Foreground="Black" FontSize="30" VerticalAlignment="Center"/>
+            <ListView x:Name="lstfiles"/>
+        </StackPanel>
+    </Grid>
+</Page>
+

@@ -1,0 +1,25 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="TheCrypto.Forms.AgreementPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TheCrypto.Forms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"                               >
+
+    <StackPanel x:Name="MainPanel">
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0E1F1B"/>
+                <GradientStop Color="#FF6DFFDE" Offset="1"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+        <TextBlock x:Name="tbLabel" HorizontalAlignment="Left" Margin="50,30,20,20" Text="The Crypto" FontSize="40" Foreground="Pink" Height="65"/>
+        <TextBox x:Name="AgreeBox" Margin="20"/>
+        <StackPanel Orientation="Horizontal" Height="100" Margin="20,0,0,0">
+            <Button x:ConnectionId='2' x:Name="btnOk" Foreground="Black" AutomationProperties.Name="Accept the ageement" Style="{StaticResource YesAppBarButtonStyle}"                    />
+            <Button x:ConnectionId='3' x:Name="btnCancel" Foreground="Black" AutomationProperties.Name="Cancel" Style="{StaticResource NoAppBarButtonStyle}"                        />
+        </StackPanel>
+    </StackPanel>
+</Page>
+
